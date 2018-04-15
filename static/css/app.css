@@ -1,0 +1,61 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(242, 245, 249, 1);
+  box-sizing: border-box;
+}
+
+main{
+  max-width: 960px;
+  height: 100vh;
+
+  margin:auto;
+  /* padding: 20px; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pin-wrapper{
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 480px;
+
+  text-align: center;
+}
+
+.pin-row{
+  background-color: #eee;
+}
+
+.pin-row span{
+  display: inline-block;
+  width: 50%;
+  height: 20px;
+  padding: 5px 0px;
+}
+
+.pin-3v3{
+  color: blue;
+}
+
+.pin-5v{
+  color: red;
+}
+
+.pin-gnd{
+  color: gray;
+}
+
+.pin-gpio{
+  color: green;
+}

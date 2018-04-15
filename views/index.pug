@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+  head
+    title Remote GPIO control
+    link(rel="stylesheet", type="text/css", href="/static/css/app.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:400,700")
+
+  body
+    main
+      h1= title
+      -var i=1
+      .pin-wrapper
+        while i <= 20
+          .pin-row
+            span.left(class={'pin-3v3': [1,17].includes(2*i-1), 'pin-5v': [2,4].includes(2*i-1), 'pin-gnd':[6,9,14,20,25,30,34,39].includes(2*i-1), "pin-gpio":![1,17,2,4,6,9,14,20,25,30,34,39].includes(2*i-1) }) (#{pinout[2*i-1]}) #{2*i-1}
+            span.right(class={'pin-3v3': [1,17].includes(2*i), 'pin-5v': [2,4].includes(2*i), 'pin-gnd':[6,9,14,20,25,30,34,39].includes(2*i), "pin-gpio":![1,17,2,4,6,9,14,20,25,30,34,39].includes(2*i) }) #{2*i} (#{pinout[2*i]})
+          -i++
