@@ -2,6 +2,8 @@ document.querySelectorAll('input[type="submit"]')
   .forEach((el) => el.addEventListener('click', (evt) => {
     evt.preventDefault();
 
-    console.log(evt.target.id);
+    let pin = evt.target.id.split('_')[1];
+
+    console.log(`Pin ${pin} was changed`);
 
   }));
