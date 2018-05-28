@@ -8,8 +8,10 @@ document.querySelectorAll('input[type="submit"]')
 
     let url = "/gpio?";
 
-    let input = document.querySelector(`#in_${pin}]`);
-    let output = document.querySelector(`#out_${pin}]`);
+    let input = document.querySelector(`#in_${pin}`);
+    let output = document.querySelector(`#out_${pin}`);
+
+    
 
     console.log(input.value, output.value);
 
