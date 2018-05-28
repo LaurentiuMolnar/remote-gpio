@@ -20,14 +20,8 @@
   "dependencies": {
     "express": "^4.16.3",
     "nocache": "^2.0.0",
-<<<<<<< HEAD
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
     "pug": "^2.0.3",
     "rpio": "^0.9.22"
-=======
-    "pug": "^2.0.3"
->>>>>>> parent of dea82e3... Updates
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
