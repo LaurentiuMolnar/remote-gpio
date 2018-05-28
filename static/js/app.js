@@ -30,3 +30,8 @@ document.querySelectorAll('label[for^=out]').
   forEach((el) => el.addEventListener('click', (evt) => {
     document.querySelector('.voltage-controller').style.display = "block";
   }));
+
+document.querySelector('.voltage-controller > a').addEventListener('click', (evt) => {
+  evt.preventDefault();
+  document.querySelector('[value=low]').checked = true;
+})
