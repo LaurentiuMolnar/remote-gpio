@@ -18,11 +18,11 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 
-require('./authentication').init(app);
+require('./authentication').init();
 
 app.use(session({
   store: new RedisStore({
-    url: "redis://localhost:8000"
+    url: "redis://spotty-ape-38.localtunnel.me/auth"
   }),
   secret: 'my-super-secret',
   resave: false,
