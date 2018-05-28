@@ -9,6 +9,6 @@ document.querySelectorAll('input[type="submit"]')
   }));
 
 document.querySelectorAll('label[for^=out]').
-  forEach((el) => el.addEventListener('check', (evt) => {
+  forEach((el) => el.addEventListener('click', (evt) => {
     document.querySelector('.voltage-controller').style.display = "block";
   }));
