@@ -37,7 +37,7 @@ main{
   background-color: #eee;
 }
 
-.pin-row span{
+.pin-row > span{
   display: inline-block;
   width: 50%;
   height: 20px;
