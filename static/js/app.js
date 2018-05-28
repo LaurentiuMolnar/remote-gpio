@@ -11,9 +11,9 @@ document.querySelectorAll('input[type="submit"]')
     let input = document.querySelector(`#in_${pin}`);
     let output = document.querySelector(`#out_${pin}`);
 
-    
 
-    console.log(input.value, output.value);
+
+    console.log(input, output.value);
 
   }));
 
