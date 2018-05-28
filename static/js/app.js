@@ -11,9 +11,11 @@ document.querySelectorAll('input[type="submit"]')
     let input = document.querySelector(`#in_${pin}`);
     let output = document.querySelector(`#out_${pin}`);
 
+    let dir = document.querySelector('input[id$=_${pin}]:checked');
 
 
-    console.log(input, output.value);
+
+    console.log(dir.value);
 
   }));
 
