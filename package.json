@@ -27,7 +27,8 @@
     "nocache": "^2.0.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "rpio": "^0.9.22"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
