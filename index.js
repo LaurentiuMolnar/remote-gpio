@@ -9,27 +9,6 @@ const pinout = ["", "3v3", "5v", "gpio2", "5v", "gpio3","gnd","gpio4","gpio14","
   // console.log(pinout.length);
 
 app.use(require("nocache")());
-<<<<<<< HEAD
-app.use(bodyParser.urlencoded({
-  extended: false
-}));
-
-require('./authentication').init();
-
-app.use(session({
-  store: new RedisStore({
-    url: "redis://spotty-ape-38.localtunnel.me/auth"
-  }),
-  secret: 'my-super-secret',
-  resave: false,
-  saveUninitalized: false
-}));
-
-app.use(passport.initialize());
-app.use(passport.session());
-=======
->>>>>>> parent of dea82e3... Updates
-
 app.set('view engine', 'pug');
 
 app.get("/", (req, res) => res.render("index", {title: "Remote GPIO control", pinout: pinout}));
