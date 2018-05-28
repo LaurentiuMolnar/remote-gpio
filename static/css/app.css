@@ -59,3 +59,23 @@ main{
 .pin-gpio{
   color: green;
 }
+
+input[type="checkbox"], label{
+  display: none;
+}
+
+label {
+  text-transform: uppercase;
+}
+label:hover{
+  cursor: pointer;
+}
+
+.pin-gpio > input[type="checkbox"],
+.pin-gpio > label {
+  display: inherit;
+}
+
+label[for^="out"] {
+  padding-right: 5px;
+}
