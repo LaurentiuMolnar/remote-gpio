@@ -11,7 +11,10 @@ const pinout = ["", "3v3", "5v", "gpio2", "5v", "gpio3","gnd","gpio4","gpio14","
 app.use(require("nocache")());
 app.set('view engine', 'pug');
 
-app.get("/", (req, res) => res.render("index", {title: "Remote GPIO control", pinout: pinout}));
+app.get("/", (req, res) => {
+
+  res.render("index", {title: "Remote GPIO control", pinout: pinout})
+});
 
 app.get("/gpio", (req, res) => {
   console.log(req.query);
