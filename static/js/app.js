@@ -15,14 +15,23 @@ document.querySelectorAll('input[type="submit"]')
 
     let value;
 
-    if(dir == null) alert("Choose in or out");
-    else if (dir.value == 'out') value = document.querySelector('[name=voltage]:checked').value;
+    if(dir == null) {
+      alert("Choose in or out");
+      return;
+    } else if (dir.value == 'out') value = document.querySelector('[name=voltage]:checked').value;
 
     url += `pin=${pin}&dir=${dir.value}`;
 
     if(dir.value == 'out') url += `&value=${value}`;
 
     console.log(url);
+
+    if(dir) {
+      fetch(url)
+      .then((response) => console.log(response))
+      .catch(console.error(err))
+      ;
+    }
 
   }));
 
