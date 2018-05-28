@@ -78,4 +78,5 @@ label:hover{
 
 label[for^="out"] {
   padding-right: 5px;
+  color: black;
 }
