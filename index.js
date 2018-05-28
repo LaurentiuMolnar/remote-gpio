@@ -56,7 +56,7 @@ app.get("/gpio", (req, res) => {
       break;
   }
 
-  res.status(200).json({
+  res.json({
     pin: req.query.pin,
     direction: req.query.dir,
     value: (req.query.dir == 'out') ? req.query.value : 'null',
