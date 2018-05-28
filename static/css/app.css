@@ -75,9 +75,18 @@ label:hover{
 .pin-gpio > label,
 .pin-gpio > input[type="submit"] {
   display: inherit;
+  color: black;
 }
 
 label[for^="out"] {
   padding-right: 5px;
-  color: black;
+}
+
+.voltage-controller {
+  display: none;
+}
+
+.voltage-controller a {
+  text-decoration: none;
+  text-transform: uppercase;
 }

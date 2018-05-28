@@ -7,3 +7,8 @@ document.querySelectorAll('input[type="submit"]')
     console.log(`Pin ${pin} was changed`);
 
   }));
+
+document.querySelectorAll('label[for^=out]').
+  forEach((el) => el.addEventListener('check', (evt) => {
+    document.querySelector('.voltage-controller').style.display = "block";
+  }));

@@ -9,6 +9,12 @@ html(lang="en")
     main
       h1= title
       -var i=1
+      .voltage-controller
+        input(type="radio", value="high", name="voltage", id="high")
+        label(for="high") high
+        input(type="radio", value="low", name="voltage")
+        label(for="low") low
+        a(href="#") Reset
       .pin-wrapper
         while i <= 20
           .pin-row
