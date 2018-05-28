@@ -60,7 +60,7 @@ main{
   color: green;
 }
 
-input[type="checkbox"], label{
+input[type="checkbox"], label, input[type="submit"]{
   display: none;
 }
 
@@ -72,7 +72,8 @@ label:hover{
 }
 
 .pin-gpio > input[type="checkbox"],
-.pin-gpio > label {
+.pin-gpio > label,
+.pin-gpio > input[type="submit"] {
   display: inherit;
 }
 

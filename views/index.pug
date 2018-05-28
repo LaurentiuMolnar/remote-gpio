@@ -12,13 +12,13 @@ html(lang="en")
       .pin-wrapper
         while i <= 20
           .pin-row
-            span.left(class={'pin-3v3': [1,17].includes(2*i-1), 'pin-5v': [2,4].includes(2*i-1), 'pin-gnd':[6,9,14,20,25,30,34,39].includes(2*i-1), "pin-gpio":![1,17,2,4,6,9,14,20,25,30,34,39].includes(2*i-1) }) 
-              input(type="submit", value="Update pin", id=`btn_${2*i-1}`)
+            span.left(class={'pin-3v3': [1,17].includes(2*i-1), 'pin-5v': [2,4].includes(2*i-1), 'pin-gnd':[6,9,14,20,25,30,34,39].includes(2*i-1), "pin-gpio":![1,17,2,4,6,9,14,20,25,30,34,39].includes(2*i-1) })
               input(type="checkbox", value="in", name="dir", id=`in_${2*i-1}`)
               label(for=`in_${2*i-1}`) in
               input(type="checkbox", value="out", name="dir", id=`out_${2*i-1}`)
               label(for=`out_${2*i-1}`) out
               span (#{pinout[2*i-1]}) #{2*i-1}
+              input(type="submit", value="Update pin", id=`btn_${2*i-1}`)
             span.right(class={'pin-3v3': [1,17].includes(2*i), 'pin-5v': [2,4].includes(2*i), 'pin-gnd':[6,9,14,20,25,30,34,39].includes(2*i), "pin-gpio":![1,17,2,4,6,9,14,20,25,30,34,39].includes(2*i) }) 
               span #{2*i} (#{pinout[2*i]})
               input(type="checkbox", value="in", name="dir", id=`in_${2*i}`)
