@@ -52,6 +52,13 @@ document.querySelectorAll('label[for^=out]').
     document.querySelector('.voltage-controller').style.display = "block";
   }));
 
+// Configuring a pin as an input will hide the voltage controller because you cannot set the value of an input
+document.querySelectorAll('label[for^=in]').
+  forEach((el) => el.addEventListener('click', (evt) => {
+    document.querySelector('.voltage-controller').style.display = "none";
+  }));
+
+
 // Clicking the RESET button on the voltage controller will reset the voltage option to LOW
 document.querySelector('.voltage-controller > a').addEventListener('click', (evt) => {
   evt.preventDefault();
