@@ -29,7 +29,7 @@ document.querySelectorAll('input[type="submit"]')
     if(dir) {
       fetch(url)
       .then((response) => console.log(response))
-      .catch(console.error(err))
+      .catch((err) => console.error(err))
       ;
     }
 

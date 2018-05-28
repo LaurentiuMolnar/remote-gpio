@@ -17,7 +17,29 @@ app.get("/", (req, res) => res.render("index", {title: "Remote GPIO control", pi
 app.get("/gpio", (req, res) => {
   console.log(req.query);
 
-  res.send('Success');
+  let error;
+
+  switch(req.query.dir) {
+    case 'in':
+      rpio.open(req.query.pin, rpio.INPUT);
+      error = false;
+      break;
+    case 'out':
+      rpio.open(req.query.pin, rpio.OUTPUT, (req.query.value == 'high') ? rpio.HIGH : rpio.LOW);
+      error = false;
+      break;
+    default:
+      console.log('There was an error. Try again!');
+      error = true;
+      break;
+  }
+
+  res.json({
+    pin: req.query.pin,
+    direction: req.query.dir,
+    value: (req.query.dir == 'out') ? req.query.value : 'null',
+    error: error
+  });
 
 });
 
