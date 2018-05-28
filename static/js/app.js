@@ -6,6 +6,13 @@ document.querySelectorAll('input[type="submit"]')
 
     console.log(`Pin ${pin} was changed`);
 
+    let url = "/gpio?";
+
+    let input = document.querySelector(`#in_${pin}]`);
+    let output = document.querySelector(`#out_${pin}]`);
+
+    console.log(input.value, output.value);
+
   }));
 
 document.querySelectorAll('label[for^=out]').

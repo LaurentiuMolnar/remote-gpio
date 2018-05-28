@@ -91,6 +91,7 @@ label[for^="out"] {
   text-transform: uppercase;
 }
 
-.voltage-controller > input[type="radio"] {
+.voltage-controller > input[type="radio"],
+.voltage-controller > label {
   display: inherit;
 }
