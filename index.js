@@ -17,9 +17,8 @@ app.get("/", (req, res) => res.render("index", {title: "Remote GPIO control", pi
 app.get("/gpio", (req, res) => {
   console.log(req.query);
 
-  rpio.open(req.query.pin, (req.query.dir == 'in') ? rpio.INPUT : rpio.OUTPUT);
+  res.send('Success');
 
-  res.send("Success");
 });
 
 

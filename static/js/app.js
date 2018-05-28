@@ -18,7 +18,9 @@ document.querySelectorAll('input[type="submit"]')
     if(dir == null) alert("Choose in or out");
     else if (dir.value == 'out') value = document.querySelector('[name=voltage]:checked').value;
 
-    url += `pin=${pin}&dir=${dir}&value=${value}`;
+    url += `pin=${pin}&dir=${dir.value}`;
+
+    if(dir.value == 'out') url += `&value=${value}`;
 
     console.log(url);
 
